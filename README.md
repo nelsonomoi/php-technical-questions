@@ -155,8 +155,7 @@ resource "aws_instance" "example" {
 }
 
 ### 8. Write a PHP function that takes an array of integers and returns the sum of all even numbers in the array.
-php
-Copy code
+```php
 function sumOfEvenNumbers($arr) {
     $sum = 0;
     foreach ($arr as $number) {
@@ -170,9 +169,10 @@ function sumOfEvenNumbers($arr) {
 // Example usage:
 $numbers = [1, 2, 3, 4, 5, 6];
 echo sumOfEvenNumbers($numbers); // Outputs: 12
+```
+
 ### 9. Create a PHP script that reads a text file, counts the number of words in the file, and displays the result. Ensure that your code handles file open and read errors gracefully.
-php
-Copy code
+```php
 function countWordsInFile($filename) {
     if (!file_exists($filename) || !is_readable($filename)) {
         return "Error: File not found or is not readable.";
@@ -190,9 +190,10 @@ function countWordsInFile($filename) {
 // Example usage:
 $filename = 'example.txt';
 echo countWordsInFile($filename);
+```
+
 ### 10. Using PHP, make a GET request to a sample REST API (e.g., JSONPlaceholder) to retrieve a list of users. Parse the JSON response and display the user's name and email address.
-php
-Copy code
+```php
 $apiUrl = "https://jsonplaceholder.typicode.com/users";
 
 $response = file_get_contents($apiUrl);
@@ -208,6 +209,8 @@ if ($users === null) {
 foreach ($users as $user) {
     echo "Name: " . $user['name'] . ", Email: " . $user['email'] . "\n";
 }
+```
+
 ### 11. Describe how you would design an auto-scaling setup in AWS to handle a PHP application with fluctuating traffic. What services and features would you use and provide a high-level architecture diagram if possible.
 Auto-scaling setup in AWS:
 
