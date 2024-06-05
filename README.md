@@ -269,8 +269,8 @@ sendTask('Email sending request');
 
 ### 13. Serialization and Compression:
 
-php
-Copy code
+```php
+
 $data = array('foo' => 'bar', 'baz' => 'qux');
 $serializedData = serialize($data);
 $compressedData = gzcompress($serializedData);
@@ -284,7 +284,7 @@ $uncompressedData = gzuncompress($compressedDataFromFile);
 $unserializedData = unserialize($uncompressedData);
 
 print_r($unserializedData);
-
+```
 
 ### 14. OAuth 2.0 Authentication:
 
@@ -315,10 +315,13 @@ $response = $client->get('https://example.com/api/resource', [
 
 $data = json_decode((string) $response->getBody(), true);
 print_r($data);
-MS SQL Server Integration:
 
-php
-Copy code
+```
+
+
+### 15. MS SQL Server Integration:
+
+```php
 $serverName = "localhost";
 $connectionOptions = [
     "Database" => "YourDatabase",
