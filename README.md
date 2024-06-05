@@ -117,7 +117,7 @@ Best practices:
   - Use proper error handling and logging.
   -  Implement Content Security Policy (CSP) headers.
 
-Compare and contrast the major cloud service providers (e.g., AWS, Azure, Google Cloud). Describe the advantages and use cases for each. If you were to deploy a PHP application, which cloud provider would you choose and why?
+### 6. Compare and contrast the major cloud service providers (e.g., AWS, Azure, Google Cloud). Describe the advantages and use cases for each. If you were to deploy a PHP application, which cloud provider would you choose and why?
 AWS:
 
 Advantages: Largest number of services, global reach, extensive community and support.
@@ -133,7 +133,8 @@ Use cases: Startups and tech companies focusing on big data and AI/ML projects.
 Choosing a cloud provider for a PHP application:
 
 AWS: Due to its extensive services, flexibility, and support, AWS is a suitable choice for deploying PHP applications, especially if you need scalability and various integrations.
-Explain the concept of Infrastructure as Code and its importance in cloud infrastructure management. Provide an example of how you would define infrastructure components using a tool like Terraform or AWS CloudFormation.
+
+### 7. Explain the concept of Infrastructure as Code and its importance in cloud infrastructure management. Provide an example of how you would define infrastructure components using a tool like Terraform or AWS CloudFormation.
 Infrastructure as Code (IaC): Managing and provisioning computing infrastructure through machine-readable scripts instead of manual processes. It ensures consistency, version control, and automation.
 
 Example using Terraform:
@@ -152,7 +153,8 @@ resource "aws_instance" "example" {
     Name = "example-instance"
   }
 }
-Write a PHP function that takes an array of integers and returns the sum of all even numbers in the array.
+
+### 8. Write a PHP function that takes an array of integers and returns the sum of all even numbers in the array.
 php
 Copy code
 function sumOfEvenNumbers($arr) {
@@ -168,7 +170,7 @@ function sumOfEvenNumbers($arr) {
 // Example usage:
 $numbers = [1, 2, 3, 4, 5, 6];
 echo sumOfEvenNumbers($numbers); // Outputs: 12
-Create a PHP script that reads a text file, counts the number of words in the file, and displays the result. Ensure that your code handles file open and read errors gracefully.
+### 9. Create a PHP script that reads a text file, counts the number of words in the file, and displays the result. Ensure that your code handles file open and read errors gracefully.
 php
 Copy code
 function countWordsInFile($filename) {
@@ -188,7 +190,7 @@ function countWordsInFile($filename) {
 // Example usage:
 $filename = 'example.txt';
 echo countWordsInFile($filename);
-Using PHP, make a GET request to a sample REST API (e.g., JSONPlaceholder) to retrieve a list of users. Parse the JSON response and display the user's name and email address.
+### 10. Using PHP, make a GET request to a sample REST API (e.g., JSONPlaceholder) to retrieve a list of users. Parse the JSON response and display the user's name and email address.
 php
 Copy code
 $apiUrl = "https://jsonplaceholder.typicode.com/users";
@@ -206,7 +208,7 @@ if ($users === null) {
 foreach ($users as $user) {
     echo "Name: " . $user['name'] . ", Email: " . $user['email'] . "\n";
 }
-Describe how you would design an auto-scaling setup in AWS to handle a PHP application with fluctuating traffic. What services and features would you use and provide a high-level architecture diagram if possible.
+### 11. Describe how you would design an auto-scaling setup in AWS to handle a PHP application with fluctuating traffic. What services and features would you use and provide a high-level architecture diagram if possible.
 Auto-scaling setup in AWS:
 
 EC2 Instances: Deploy PHP application on EC2 instances.
@@ -235,8 +237,10 @@ Copy code
 Advanced Questions
 Asynchronous Processing with RabbitMQ or Redis:
 
-php
-Copy code
+### 12. Asynchronous Processing with RabbitMQ
+RabbitMQ Example:
+
+```php
 // RabbitMQ example setup
 require_once __DIR__ . '/vendor/autoload.php';
 
@@ -259,7 +263,11 @@ function sendTask($data) {
 }
 
 sendTask('Email sending request');
-Serialization and Compression:
+
+```
+
+
+### 13. Serialization and Compression:
 
 php
 Copy code
@@ -276,10 +284,11 @@ $uncompressedData = gzuncompress($compressedDataFromFile);
 $unserializedData = unserialize($uncompressedData);
 
 print_r($unserializedData);
-OAuth 2.0 Authentication:
 
-php
-Copy code
+
+### 14. OAuth 2.0 Authentication:
+
+```php
 // Using the Guzzle HTTP client for simplicity
 require 'vendor/autoload.php';
 
@@ -342,3 +351,4 @@ echo json_encode($results);
 
 sqlsrv_free_stmt($stmt);
 sqlsrv_close($conn);
+```
