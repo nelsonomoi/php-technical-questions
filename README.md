@@ -2,36 +2,36 @@
 
 This repository contains detailed answers and code examples for DPO technical interview questions. 
 
-Explain the difference between single-quoted and double-quoted strings in PHP. Provide examples of when you would use each.
-In PHP, single-quoted strings and double-quoted strings handle variables and special characters differently.
+## 1. Explain the difference between single-quoted and double-quoted strings in PHP. Provide examples of when you would use each.
+- '**Single-quoted strings**': Variables and escape sequences (except \\ and \') are not interpreted. This makes single-quoted strings faster and less error-prone when no variable interpolation is needed.
 
-Single-quoted strings: Variables and escape sequences (except \\ and \') are not interpreted. This makes single-quoted strings faster and less error-prone when no variable interpolation is needed.
-
-php
+```php
 Copy code
-$name = 'John';
+$name = 'Nelson';
 $singleQuoted = 'Hello, $name'; // Outputs: Hello, $name
-Double-quoted strings: Variables and special characters like \n (newline) and \t (tab) are parsed within double quotes.
+```
+- '**Double-quoted strings**': Variables and special characters like \n (newline) and \t (tab) are parsed within double quotes.
 
-php
+```php
 Copy code
 $name = 'John';
 $doubleQuoted = "Hello, $name"; // Outputs: Hello, John
+```
 Usage examples:
+- we use single-quoted strings when no variable interpolation or special characters are needed.
+- we use double-quoted strings when you need to include variables or special characters.
 
-Use single-quoted strings when no variable interpolation or special characters are needed.
-Use double-quoted strings when you need to include variables or special characters.
-Describe the principles of Object-Oriented Programming (OOP) in PHP. How do you define a class and create objects in PHP? Provide an example of a class and its instantiation.
+  
+## 2. Describe the principles of Object-Oriented Programming (OOP) in PHP. How do you define a class and create objects in PHP? Provide an example of a class and its instantiation.
 Principles of OOP in PHP:
+- '**Encapsulation**': Bundling data and methods that operate on that data within a single unit (class).
+- '**Inheritance**': A class can inherit properties and methods from another class.
+- '**Polymorphism**': The ability to present the same interface for different underlying forms (data types).
+- '**Abstraction**': Hiding the complex implementation details and showing only the necessary features of an object.
 
-Encapsulation: Bundling data and methods that operate on that data within a single unit (class).
-Inheritance: A class can inherit properties and methods from another class.
-Polymorphism: The ability to present the same interface for different underlying forms (data types).
-Abstraction: Hiding the complex implementation details and showing only the necessary features of an object.
 Defining a class and creating objects:
 
-php
-Copy code
+```php
 class Car {
     // Properties
     public $color;
@@ -52,13 +52,12 @@ class Car {
 // Instantiating an object
 $myCar = new Car('red', 'Toyota');
 echo $myCar->getDescription(); // Outputs: This car is a red Toyota.
-Explain the purpose of exception handling in PHP. How do you catch and handle exceptions in your code? Provide an example of how you would use try-catch blocks.
+
+```
+## 3. Explain the purpose of exception handling in PHP. How do you catch and handle exceptions in your code? Provide an example of how you would use try-catch blocks.
 Purpose of exception handling: To manage errors and exceptional conditions in a controlled manner, providing a way to handle errors without crashing the application.
-
 Catching and handling exceptions:
-
-php
-Copy code
+```php
 try {
     // Code that may throw an exception
     $result = divide(10, 0);
@@ -73,24 +72,21 @@ function divide($dividend, $divisor) {
     }
     return $dividend / $divisor;
 }
-Discuss different methods for connecting to a database in PHP. Describe the differences between MySQLi and PDO. Provide an example of how to perform a basic database query using one of these methods.
+```
+
+## 4. Discuss different methods for connecting to a database in PHP. Describe the differences between MySQLi and PDO. Provide an example of how to perform a basic database query using one of these methods.
 Methods for connecting to a database:
-
-MySQLi (MySQL Improved): Supports both procedural and object-oriented approaches, and is specific to MySQL databases.
-PDO (PHP Data Objects): Provides a database access abstraction layer, supporting multiple database types (MySQL, PostgreSQL, SQLite, etc.).
+- MySQLi (MySQL Improved): Supports both procedural and object-oriented approaches, and is specific to MySQL databases.
+- PDO (PHP Data Objects): Provides a database access abstraction layer, supporting multiple database types (MySQL, PostgreSQL, SQLite, etc.).
 Differences:
-
 MySQLi:
-
-Only works with MySQL databases.
-Offers procedural and OOP styles.
+    - Only works with MySQL databases.
+    - Offers procedural and OOP styles.
 PDO:
-
-Supports multiple database types.
-Only offers OOP style.
-Supports prepared statements which are better for security.
+    - Supports multiple database types.
+    - Only offers OOP style.
+    - Supports prepared statements which are better for security.
 Example using PDO:
-
 php
 Copy code
 try {
@@ -104,8 +100,10 @@ try {
     }
 } catch (PDOException $e) {
     echo 'Connection failed: ' . $e->getMessage();
-}
-How would you protect a PHP application from common security vulnerabilities such as SQL injection and cross-site scripting (XSS)? Provide code examples or best practices for mitigating these threats.
+
+} 
+```
+## 5. How would you protect a PHP application from common security vulnerabilities such as SQL injection and cross-site scripting (XSS)? Provide code examples or best practices for mitigating these threats.
 SQL Injection Protection:
 
 Use prepared statements and parameterized queries.
