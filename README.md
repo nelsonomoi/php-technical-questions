@@ -5,14 +5,12 @@ This repository contains detailed answers and code examples for DPO technical in
 ### 1. Explain the difference between single-quoted and double-quoted strings in PHP. Provide examples of when you would use each.
 - **Single-quoted strings**: Variables and escape sequences (except \\ and \') are not interpreted. This makes single-quoted strings faster and less error-prone when no variable interpolation is needed.
 ```php
-Copy code
 $name = 'Nelson';
 $singleQuoted = 'Hello, $name'; // Outputs: Hello, $name
 ```
 - **Double-quoted strings**: Variables and special characters like \n (newline) and \t (tab) are parsed within double quotes.
 
 ```php
-Copy code
 $name = 'John';
 $doubleQuoted = "Hello, $name"; // Outputs: Hello, John
 ```
