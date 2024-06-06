@@ -71,17 +71,21 @@ function divide($dividend, $divisor) {
 
 ### 4. Discuss different methods for connecting to a database in PHP. Describe the differences between MySQLi and PDO. Provide an example of how to perform a basic database query using one of these methods.
 Methods for connecting to a database:
-  - MySQLi (MySQL Improved): Supports both procedural and object-oriented approaches, and is specific to MySQL databases.
-  - PDO (PHP Data Objects): Provides a database access abstraction layer, supporting multiple database types (MySQL, PostgreSQL, SQLite, etc.).
+  - MySQLi (MySQL Improved):
+    Supports both procedural and object-oriented approaches, and is specific to MySQL databases.
+  - PDO (PHP Data Objects):
+    Provides a database access abstraction layer, supporting multiple database types (MySQL, PostgreSQL, SQLite, etc.).
   
 Differences:
-  MySQLi:
+
+  - MySQLi:
     - Only works with MySQL databases.
     - Offers procedural and OOP styles.
-  PDO:
+  - PDO:
     - Supports multiple database types.
     - Only offers OOP style.
     - Supports prepared statements which are better for security.
+      
 Example using PDO:
 ``` php
 try {
