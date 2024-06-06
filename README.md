@@ -1,6 +1,6 @@
-# PHP Technical Interview Preparation
+# PHP Technical Interview Questions & Answers
 
-This repository contains detailed answers and code examples for DPO technical interview questions. 
+This repository contains detailed answers and code examples for PHP technical interview questions. 
 
 ### 1. Explain the difference between single-quoted and double-quoted strings in PHP. Provide examples of when you would use each.
 - **Single-quoted strings**: Variables and escape sequences (except \\ and \') are not interpreted. This makes single-quoted strings faster and less error-prone when no variable interpolation is needed.
