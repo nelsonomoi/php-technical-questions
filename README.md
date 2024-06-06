@@ -104,57 +104,58 @@ try {
 ```
 ### 5. How would you protect a PHP application from common security vulnerabilities such as SQL injection and cross-site scripting (XSS)? Provide code examples or best practices for mitigating these threats.
 SQL Injection Protection:
-Use prepared statements and parameterized queries.
+  - Use prepared statements and parameterized queries.
 ```php
 $stmt = $pdo->prepare('SELECT * FROM users WHERE username = :username');
 $stmt->execute(['username' => $username]);
 ```
 XSS Protection:
-Escape output using htmlspecialchars().
+ - Escape output using htmlspecialchars().
 ```php
 echo htmlspecialchars($userInput, ENT_QUOTES, 'UTF-8');
 ```
 Best practices:
   - Validate and sanitize all user inputs.
   - Use proper error handling and logging.
-  -  Implement Content Security Policy (CSP) headers.
+  - Implement Content Security Policy (CSP) headers.
 
 ### 6. Compare and contrast the major cloud service providers (e.g., AWS, Azure, Google Cloud). Describe the advantages and use cases for each. If you were to deploy a PHP application, which cloud provider would you choose and why?
-AWS:
+**AWS**:
+Advantages: 
+  - Largest number of services
+  - Global reach
+  - Extensive community and support
+    
+Use cases: 
+  - Enterprises needing a broad range of services
+  - Scalability
+  - Global reach
+    
+**Azure**:
 
-Advantages: Largest number of services, global reach, extensive community and support.
-Use cases: Enterprises needing a broad range of services, scalability, and global reach.
-Azure:
+Advantages: 
+  - Strong integration with Microsoft products
+  - Good for hybrid cloud solutions.
+    
+Use cases: 
+  - Businesses already using Microsoft products
+  - Hybrid cloud environments.
+    
+**Google Cloud**:
 
-Advantages: Strong integration with Microsoft products, good for hybrid cloud solutions.
-Use cases: Businesses already using Microsoft products, hybrid cloud environments.
-Google Cloud:
-
-Advantages: Strong data analytics and machine learning capabilities, competitive pricing.
-Use cases: Startups and tech companies focusing on big data and AI/ML projects.
+Advantages: 
+  - Strong data analytics and machine learning capabilities
+  - Competitive pricing.
+    
+Use cases: 
+  - Startups and tech companies focusing on big data and AI/ML projects.
+    
 Choosing a cloud provider for a PHP application:
-
-AWS: Due to its extensive services, flexibility, and support, AWS is a suitable choice for deploying PHP applications, especially if you need scalability and various integrations.
+AWS: Due to its extensive services, flexibility, and support,
+AWS is a suitable choice for deploying PHP applications, especially if you need scalability and various integrations.
 
 ### 7. Explain the concept of Infrastructure as Code and its importance in cloud infrastructure management. Provide an example of how you would define infrastructure components using a tool like Terraform or AWS CloudFormation.
-Infrastructure as Code (IaC): Managing and provisioning computing infrastructure through machine-readable scripts instead of manual processes. It ensures consistency, version control, and automation.
 
-Example using Terraform:
-
-hcl
-Copy code
-provider "aws" {
-  region = "us-west-2"
-}
-
-resource "aws_instance" "example" {
-  ami           = "ami-0c55b159cbfafe1f0"
-  instance_type = "t2.micro"
-
-  tags = {
-    Name = "example-instance"
-  }
-}
 
 ### 8. Write a PHP function that takes an array of integers and returns the sum of all even numbers in the array.
 ```php
@@ -222,31 +223,10 @@ Elastic Load Balancer (ELB): Distribute incoming traffic across multiple EC2 ins
 Amazon RDS: Use Amazon RDS for a managed database service.
 CloudWatch: Monitor resources and set up alarms for scaling policies.
 S3: Store static assets.
-High-level architecture:
 
-csharp
-Copy code
-  [User]
-     |
-[Route 53]
-     |
-   [ELB]
-     |
- [Auto Scaling Group]
-     |
-  [EC2 Instances]
-     |
- [Amazon RDS]
-     |
-   [S3]
-Advanced Questions
-Asynchronous Processing with RabbitMQ or Redis:
 
 ### 12. Asynchronous Processing with RabbitMQ
-RabbitMQ Example:
-
 ```php
-// RabbitMQ example setup
 require_once __DIR__ . '/vendor/autoload.php';
 
 use PhpAmqpLib\Connection\AMQPStreamConnection;
@@ -275,7 +255,6 @@ sendTask('Email sending request');
 ### 13. Serialization and Compression:
 
 ```php
-
 $data = array('foo' => 'bar', 'baz' => 'qux');
 $serializedData = serialize($data);
 $compressedData = gzcompress($serializedData);
@@ -323,15 +302,14 @@ print_r($data);
 
 ```
 
-
 ### 15. MS SQL Server Integration:
 
 ```php
 $serverName = "localhost";
 $connectionOptions = [
-    "Database" => "YourDatabase",
-    "Uid" => "your_username",
-    "PWD" => "your_password"
+    "Database" => "testdb",
+    "Uid" => "nomoierueru",
+    "PWD" => "N@63Kenya;8732."
 ];
 
 $conn = sqlsrv_connect($serverName, $connectionOptions);
