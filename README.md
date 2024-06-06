@@ -121,6 +121,7 @@ Best practices:
 
 ### 6. Compare and contrast the major cloud service providers (e.g., AWS, Azure, Google Cloud). Describe the advantages and use cases for each. If you were to deploy a PHP application, which cloud provider would you choose and why?
 **AWS**:
+
 Advantages: 
   - Largest number of services
   - Global reach
